@@ -1,0 +1,57 @@
+<app-header title="Login" class="ion-text-center"></app-header>
+<ion-content>
+
+    <div class="ion-text-center">
+
+        <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit()">
+            
+            <app-logo></app-logo>
+
+
+        <!-- =============  EMAIL ============== -->
+
+            <app-custom-input
+            autocomplete= "email"
+            icon= "mail-outline"
+            [control] ="form.controls.email"
+            type= "email"
+            label= "correo"
+            ></app-custom-input>
+
+            <div class="validators" *ngIf="form.controls.email.errors && form.controls.email.touched">
+                <div *ngIf="form.controls.email.errors?. ['required']">El Correo es Requerido</div>
+                <div *ngIf="form.controls.email.errors?. ['email']">Ingrese un Correo Valido</div>
+            </div>
+
+
+            <!-- =============  PASSWORD ============== -->
+
+
+            <app-custom-input
+            [control] ="form.controls.password"
+            icon= "lock-closed-outline"
+            type= "password"
+            label="Contraseña"
+            ></app-custom-input>
+    
+            <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
+                <div *ngIf="form.controls.password.errors?. ['required']">La Contraseña es Requerido</div>
+            </div>
+
+            <p class="ion-text-end" [routerLink]="['/forgot-password']"> Olvidaste tu Contraseña</p>
+
+            <ion-button color="dark" expand="block" mode="ios" class="submit" type="submit" [disabled]="form.invalid">
+                Ingresar
+                <ion-icon slot="end" name="log-in-outline"></ion-icon>
+            </ion-button>
+
+            <ion-button color="dark" class="ion-margin-top" expand="block" mode="ios" fill="outline" [routerLink]="['/sign-up']" >
+                Registrarse
+                <ion-icon slot="end" name="person-add-outline"></ion-icon>
+            </ion-button>
+
+            <!-- {{form.value | json}} -->
+        </form>
+
+    </div>
+</ion-content>

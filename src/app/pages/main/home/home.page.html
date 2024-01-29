@@ -1,0 +1,35 @@
+<app-header [showMenu]="true" title="Inicio"></app-header>
+
+<ion-content>
+  <img src="" alt="">
+  <h1 align="center">Bienvenido a Uber x Duoc!</h1>
+  <h2>{{ user().name }}</h2>
+
+  <ion-card color=#000000>
+    <ion-card-header>
+      <img src='/assets/uber-main-home.jpg'>
+       <ion-card-title>Te dejamos en la puerta de tu casa!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content> Te llevo es una aplicación diseñada para el traslado,
+      estés donde estés, entrando a la app te llevaremos a donde quieras.
+    </ion-card-content>
+    </ion-card>
+
+
+    
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="dark">
+        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button color="dark" [routerLink]="['/main/agendar']" >
+          <ion-icon name="car-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+
+
+</ion-content>
+

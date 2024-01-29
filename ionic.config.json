@@ -1,0 +1,7 @@
+{
+  "name": "UberDuocFirebase",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

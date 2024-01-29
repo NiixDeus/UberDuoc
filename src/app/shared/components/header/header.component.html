@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="dark">
+
+
+
+      <!--==================== Back Button ======================-->
+
+      <ion-buttons slot="start">
+        <ion-back-button *ngIf="backButton" [defaultHref]="backButton"></ion-back-button>
+      </ion-buttons>
+
+      <!--==================== Dismiss Modal ======================-->
+      <ion-button (click)="dismissModal()" *ngIf="isModal">
+        <ion-icon name="close-circle-outline"></ion-icon>
+      </ion-button>
+
+
+      <ion-menu-button slot="start" *ngIf="showMenu" menu="menu-content"></ion-menu-button>
+
+
+
+
+
+
+
+
+    <ion-title>
+      <strong>{{title}}</strong>
+      <div class="admin">UBER DUOC</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
