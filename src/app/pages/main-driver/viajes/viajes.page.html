@@ -1,0 +1,45 @@
+<app-header  title="Viajes"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Viajes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+
+
+
+
+
+
+
+ <!-- Formulario de Generación de Viaje -->
+  <div>
+    <label for="nombre">Nombre del Chofer:</label>
+    <input [(ngModel)]="travelData.nombreChofer" id="nombre" />
+
+    <label for="modelo">Modelo de Auto:</label>
+    <input [(ngModel)]="travelData.modeloAuto" id="modelo" />
+
+    <label for="patente">Patente de Auto:</label>
+    <input [(ngModel)]="travelData.patenteAuto" id="patente" />
+
+    <button (click)="createTravel()">Generar Viaje</button>
+  </div>
+
+  <!-- Contenido adicional de la página aquí -->
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="dark" [routerLink]="['/main-driver/home-driver']">
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

@@ -25,6 +25,10 @@ const routes: Routes = [
     path: 'forgot-password',
     loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule), canActivate: [NoAuthGuard]
   },
+  {
+    path: 'main-driver',
+    loadChildren: () => import('./pages/main-driver/main-driver.module').then( m => m.MainDriverPageModule) , canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({

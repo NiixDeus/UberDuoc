@@ -1,9 +1,26 @@
 <app-header [showMenu]="true" title="Agendar"></app-header>
 
+
+<ion-header collapse="condense">
+  <ion-toolbar>
+    <ion-title size="large">agendar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">agendar</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+
+
+  <!-- Formulario para datos del usuario -->
+  <form>
+    <!-- Campos del formulario para datos del usuario -->
+    <ion-button (click)="reserveTravel()">Reservar Viaje</ion-button>
+  </form>
+
+
+
+
+
+
 </ion-content>

@@ -28,7 +28,7 @@ export class NoAuthGuard implements CanActivate {
       this.firebaseSvc.getAtuh().onAuthStateChanged(auth => {
         if (!auth) resolve(true);
         else{
-            this.utilsSvc.routerLink('/main/home');
+            this.utilsSvc.redirectToMain;
             resolve(false);
         }
       })

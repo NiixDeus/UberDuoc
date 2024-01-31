@@ -1,0 +1,40 @@
+<app-header  title="Inicio"></app-header>
+
+<ion-content>
+  <img src="" alt="">
+  <h1 align="center">Bienvenido Colaborador!</h1>
+  <h2>{{ user().name }}</h2>
+
+  <ion-card color=#000000>
+    <ion-card-header>
+      <img src='/assets/uber-main-home.jpg'>
+       <ion-card-title>Puedes crear los viajes que quieras por dia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content> El transporte de los pasajeros esta en tus manos!
+    </ion-card-content>
+    </ion-card>
+
+
+    
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="dark">
+        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button color="dark" (click)="signOut()" >
+          <ion-icon name="log-out-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="dark" [routerLink]="['/main-driver/viajes']" >
+          <ion-icon name="car-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="dark" [routerLink]="['/main-driver/profile-driver']" >
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+
+
+</ion-content>
+

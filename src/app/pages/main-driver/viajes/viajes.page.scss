@@ -1,0 +1,44 @@
+/* app/pages/viajes/viajes.page.scss */
+ion-content {
+    --ion-background-color: #f5f5f5;
+  }
+  
+  .form-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #3498db; /* Cambia este color al que desees */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Cambia este color al que desees */
+  }
+  
+  /* Estilos adicionales según sea necesario */
+  
+  
+  /* Estilos adicionales según sea necesario */
+  
+  

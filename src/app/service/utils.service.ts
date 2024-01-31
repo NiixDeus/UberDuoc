@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { Camera, CameraResultType, CameraSource} from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { AlertController, AlertOptions, LoadingController, ModalController, ModalOptions, ToastOptions } from '@ionic/angular';
 
 @Injectable({
@@ -12,7 +12,8 @@ export class UtilsService {
   toastCtrl = inject(LoadingController);
   modalCtrl = inject(ModalController);
   router = inject(Router);
-  alertCtrl = inject(AlertController)
+  alertCtrl = inject(AlertController);
+  redirect = inject(Router);
 
 
 
@@ -86,9 +87,21 @@ export class UtilsService {
 
 
 
+  // =========== Revision correo driver / user ==================
 
 
+  redirectToMain(email: string) {
+    if (email.includes('uber')) {
+      this.redirect.navigateByUrl('/main-driver/home-driver');
+    } else {
+      this.redirect.navigateByUrl('/main/home');
+    }
+  }
 
+
+  // =========== Creacion y agenda de viajes ==================
+
+  
 
 
 
@@ -96,5 +109,3 @@ export class UtilsService {
 
 
 }
-
-
